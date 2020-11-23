@@ -1,0 +1,116 @@
+{
+  "profileName": "Your name",
+  "profileContactLink": "email@email.com",
+  "profileWebsiteLink": "website.com",
+  "profileDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus laoreet erat. Quisque viverra mauris non quam porttitor fermentum. Phasellus non aliquam eros.",
+  "sections": [
+    {
+      "sectionTitle": "Experience",
+      "width": "full",
+      "layout": "default",
+      "sectionAreas": [
+        {
+          "areaTitle": "UX Engineer, Google",
+          "areaDetails": "(Jan 2018, Feb 2020)",
+          "areaText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus laoreet erat. Quisque viverra mauris non quam porttitor fermentum. Phasellus non aliquam eros."
+        },
+        {
+          "areaTitle": "Software Engineer, Microsoft",
+          "areaDetails": "(Aug 2015, Jan 2018)",
+          "areaText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus laoreet erat. Quisque viverra mauris non quam porttitor fermentum. Phasellus non aliquam eros."
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Education",
+      "width": "full",
+      "layout": "default",
+      "sectionAreas": [
+        {
+          "areaTitle": "Degree, Institution",
+          "areaDetails": "(Jan 2018, Feb 2020)",
+          "areaText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus laoreet erat. Quisque viverra mauris non quam porttitor fermentum. Phasellus non aliquam eros."
+        },
+        {
+          "areaTitle": "Degree, Institution",
+          "areaDetails": "(Sept 2015, June 2017)",
+          "areaText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus laoreet erat. Quisque viverra mauris non quam porttitor fermentum. Phasellus non aliquam eros."
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Skills",
+      "width": "half",
+      "layout": "list",
+      "sectionAreas": [
+        {
+          "areaTitle": "Front-end development",
+          "areaDetails": "(Expert)",
+          "areaText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus laoreet erat. Quisque viverra mauris non quam porttitor fermentum. Phasellus non aliquam eros."
+        },
+        {
+          "areaTitle": "UI Design",
+          "areaDetails": "(Expert)",
+          "areaText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus laoreet erat. Quisque viverra mauris non quam porttitor fermentum. Phasellus non aliquam eros."
+        },
+        {
+          "areaTitle": "Microsoft Word",
+          "areaDetails": "(Expert)",
+          "areaText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus laoreet erat. Quisque viverra mauris non quam porttitor fermentum. Phasellus non aliquam eros."
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Personal Projects",
+      "width": "half",
+      "layout": "details",
+      "sectionAreas": [
+        {
+          "areaTitle": "Project Planner",
+          "areaDetails": "(Startup)",
+          "areaText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus laoreet erat. Quisque viverra mauris non quam porttitor fermentum. Phasellus non aliquam eros."
+        },
+        {
+          "areaTitle": "YouTube Channel",
+          "areaDetails": "(Web Development)",
+          "areaText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus laoreet erat. Quisque viverra mauris non quam porttitor fermentum. Phasellus non aliquam eros."
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Awards",
+      "width": "half",
+      "layout": "list",
+      "sectionAreas": [
+        {
+          "areaTitle": "Design Award",
+          "areaDetails": "(Jan 2018, Feb 2020)",
+          "areaText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus laoreet erat. Quisque viverra mauris non quam porttitor fermentum. Phasellus non aliquam eros."
+        },
+        {
+          "areaTitle": "Incubator Acceptance",
+          "areaDetails": "(Aug 2015, Jan 2018)",
+          "areaText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus laoreet erat. Quisque viverra mauris non quam porttitor fermentum. Phasellus non aliquam eros."
+        }
+      ]
+    },
+    {
+      "sectionTitle": "References",
+      "width": "half",
+      "layout": "details",
+      "sectionAreas": [
+        {
+          "areaTitle": "Mary Lexington",
+          "areaDetails": "(Manager)",
+          "areaText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus laoreet erat. Quisque viverra mauris non quam porttitor fermentum. Phasellus non aliquam eros."
+        },
+        {
+          "areaTitle": "John Smith",
+          "areaDetails": "(Colleague)",
+          "areaText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus laoreet erat. Quisque viverra mauris non quam porttitor fermentum. Phasellus non aliquam eros."
+        }
+      ]
+    }
+  ],
+  "id": "ODQuCRXYKJylJD"
+}

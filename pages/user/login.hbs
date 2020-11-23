@@ -1,0 +1,23 @@
+<div class="accounts">
+  <form class="accounts__form" action="/user/login" method="post">
+    <div class="nav"><a class="nav__link" href="/">&larr; Back home</a></div>
+    <div class="accounts__heading">Log in</div>
+    <div class="text-field">
+      <label class="text-field__label">
+        <span class="text-field__label-text">Username</span>
+        <input class="text-field__input" type="text" name="username" required>
+      </label>
+    </div>
+    <div class="text-field">
+      <label class="text-field__label">
+        <span class="text-field__label-text">Password</span>
+        <input class="text-field__input" type="password" name="password" required>
+      </label>
+    </div>
+    <div class="accounts__forgot-link-container">
+      <a class="accounts__forgot-link" href="/user/forgot">Forgot your password?</a>
+    </div>
+    <div class="spacer--24"></div>
+    <button class="resume__layout-button resume__layout-button--small" type="submit">Login</button>
+  </form>
+</div>

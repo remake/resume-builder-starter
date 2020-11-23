@@ -1,0 +1,83 @@
+.spacer--8 { height: 8px; }
+.spacer--16 { height: 16px; }
+.spacer--24 { height: 24px; }
+.spacer--32 { height: 32px; }
+
+.accounts {
+  min-height: 100vh;
+  background-color: #F2F6FA;
+}
+.accounts__form {
+  margin: 0 auto;
+  padding: 60px 0;
+  max-width: 320px;
+  text-align: center;
+}
+.accounts__form .nav {
+  justify-content: flex-start;
+  margin-left: -1.5rem;
+}
+.accounts__top-nav {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+.accounts__heading {
+  margin-bottom: 2.5rem;
+  font-size: 36px;
+}
+.accounts__forgot-link-container {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+.accounts__forgot-link {
+  color: #0d2635;
+  text-decoration: underline;
+}
+.accounts__forgot-link:hover {
+  text-decoration: none;
+}
+
+.text-field {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+.text-field__label {
+  display: block;
+}
+.text-field__label-text {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+.text-field__input {
+  display: block;
+  width: 100%;
+  padding: 7px 5px 8px;
+  font-size: 16px;
+  line-height: 1.3em;
+}
+
+.button {
+  display: inline-block;
+  height: 36px;
+  padding: 0 12px;
+  line-height: 36px;
+  color: #FFF;
+  font-size: 14px;
+  text-align: center;
+  background-color: #536988;
+  border-radius: 5px;
+}
+.button--large {
+  height: 42px;
+  padding: 0 16px;
+  font-size: 16px;
+  line-height: 42px;
+}
+.button--account {
+  margin-top: 1rem;
+}
+.button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}

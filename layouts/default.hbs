@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Resume</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
+  <link rel="stylesheet" type="text/css" href="/assets/css/_remake.css">
+  <link rel="stylesheet" href="/assets/css/elements.css">
+  <link rel="stylesheet" href="/assets/css/front-page.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body {{#if isPreviewing}}disable-events{{/if}}>
+  {{!-- Show errors --}}
+  {{#if flashErrors }}
+    {{#each flashErrors }}
+      <div>{{ this }}</div>
+    {{/each}}
+  {{/if}}
+  {{!-- Show success messages --}}
+  {{#if flashSuccesses }}
+    {{#each flashSuccesses }}
+      <div>{{ this }}</div>
+    {{/each}}
+  {{/if}}
+  {{> yield }}
+  <script src="/assets/js/vendor/Sortable.min.js"></script>
+  <script src="/assets/js/vendor/crostini.min.js"></script>
+  <script src="/remake/js/remake.min.js"></script>
+  <script src="/assets/js/remake-init.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<div class="front-page">
+  <div class="front-page__inner">
+    <div class="front-page__top">
+      <ul>
+        {{#if currentUser}}
+          <div class="nav">
+            <a class="nav__link nav__link--reverse-color" href="/{{currentUser.details.username}}">Go to your dashboard</a>
+          </div>
+        {{else}}
+          <div class="nav">
+            <a class="nav__link nav__link--reverse-color" href="/user/signup">Sign up</a>
+            <a class="nav__link nav__link--reverse-color" href="/user/login">Log in</a>
+          </div>
+        {{/if}}
+      </ul>
+      <div class="front-page__logo"><img src="/assets/images/logo.svg"></div>
+      <h1 class="front-page__title">Create your resume</h1>
+      <div class="front-page__button-container">
+        <a class="resume__layout-button resume__layout-button--front-page" href="/user/signup">Create resume</a>
+      </div>
+      <div class="front-page__arrow-container"><img src="/assets/images/arrow-dashed.svg"></div>
+      <div class="front-page__preview-container">
+        <div class="front-page__preview"><img src="/assets/images/front-page-preview.png"></div>
+      </div>
+    </div>
+  </div>
+</div>

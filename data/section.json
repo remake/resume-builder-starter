@@ -1,0 +1,21 @@
+{
+  "section":  {
+    "sectionTitle": "New section",
+    "width": "full",
+    "layout": "default",
+    "sectionAreas": [
+      {
+        "areaImage": "/assets/images/upload.svg",
+        "areaTitle": "New item title",
+        "areaDetails": "(Jan 2018, Feb 2020)",
+        "areaText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus laoreet erat. Quisque viverra mauris non quam porttitor fermentum. Phasellus non aliquam eros."
+      },
+      {
+        "areaImage": "/assets/images/upload.svg",
+        "areaTitle": "New item title",
+        "areaDetails": "(Aug 2015, Jan 2018)",
+        "areaText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus laoreet erat. Quisque viverra mauris non quam porttitor fermentum. Phasellus non aliquam eros."
+      }
+    ]
+  }
+}

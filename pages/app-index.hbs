@@ -1,0 +1,293 @@
+<div class="resume-container">
+  {{#if currentUser}}
+    <div class="nav">
+      {{#unless isPreviewing}}<a class="nav__link" href="/{{currentUser.details.username}}/?preview=true" target="_blank">Preview as public</a>{{/unless}}
+      <a class="nav__link" href="/user/logout">Logout</a>
+    </div>
+  {{else}}
+    <div class="nav">
+      <a class="nav__link" href="/user/signup">Sign up</a>
+      &nbsp;
+      <a class="nav__link" href="/user/login">Log in</a>
+    </div>
+  {{/if}}
+  <div 
+    object 
+    key:profile-image="@search"
+    class="resume"
+  >
+    <div class="resume__profile resume__profile">
+      <label
+        edit-control-disable
+        class="resume__profile-image-container"
+      > 
+        <input 
+          update:profile-image
+          class="hidden-file" 
+          type="file" 
+        >
+        <img 
+          target:profile-image="@src"
+          src="{{default profileImage '/assets/images/upload.svg'}}"
+          class="resume__profile-image" 
+        >
+      </label>
+      <h1 
+        object 
+        key:profile-name="@innerText" 
+        edit:profile-name:without-remove
+        default:profile-name="Your name"
+        class="resume__profile-name"
+      >{{default profileName "Your name"}}</h1>
+      <div class="resume__profile-contact">
+        <a 
+          object 
+          key:profile-contact-link="@innerText"
+          edit:profile-contact-link:without-remove
+          default:profile-contact-link="email@email.com"
+          watch:profile-contact-link="setEmailLink"
+          {{#if isPageAuthor}}prevent-default{{/if}}
+          class="resume__profile-contact-link" 
+          href="mailto:{{profileContactLink}}"
+        >{{default profileContactLink "email@email.com"}}</a>
+        <div class="resume__profile-contact-separator"></div>
+        <a 
+          object 
+          key:profile-website-link="@innerText"
+          edit:profile-website-link:without-remove
+          default:profile-website-link="website.com"
+          run:watch
+          watch:profile-website-link="setLink"
+          {{#if isPageAuthor}}prevent-default{{/if}}
+          class="resume__profile-contact-link" 
+          href="{{profileWebsiteLink}}"
+        >{{default profileWebsiteLink "website.com"}}</a>
+      </div>
+      <div 
+        object 
+        key:profile-description="@innerText" 
+        edit:profile-description:without-remove:textarea
+        default:profile-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus laoreet erat. Quisque viverra mauris non quam porttitor fermentum. Phasellus non aliquam eros."
+        class="has-multi-line-text resume__profile-description"
+      >{{default profileDescription "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus laoreet erat. Quisque viverra mauris non quam porttitor fermentum. Phasellus non aliquam eros."}}</div>
+    </div>
+    <div 
+      array
+      key="sections"
+      sortable
+      class="resume__sections"
+    >
+      {{#for section in sections}}
+        <div 
+          object
+          key:section-title="@search"
+          key:width="{{section.width}}"
+          key:layout="{{section.layout}}"
+          temporary:key:editing="none"
+          temporary:key:menu="false"
+          class="resume__section"
+        >
+          <div class="resume__section-inner" flex-show-if="editing=none">
+            <div 
+              sortable-handle
+              edit-control-invisible
+              class="resume__section-grab-area"
+            >
+              <img class="resume__section-grab-handle" src="/assets/images/grab-handle.svg">
+            </div>
+            <div class="resume__section-main-area">
+              <h2 
+                target:section-title="@innerText"
+                edit:section-title:without-remove
+                class="resume__section-title"
+              >{{section.sectionTitle}}</h2>
+              <div class="resume__section-button resume__section-button--settings">
+                <button
+                  toggle:menu
+                  edit-control-invisible
+                ><img src="/assets/images/cog.svg"></button>
+                <div class="menu" show-if="menu=true">
+                  <button update:editing="width">
+                    <img class="menu__icon" src="/assets/images/columns.svg">
+                    <span>Layout options</span>
+                  </button>
+                  <button 
+                    remove:with-confirm
+                  >
+                    <img class="menu__icon" src="/assets/images/trash.svg">
+                    <span>Delete</span>
+                  </button>
+                </div>
+              </div>
+              <div 
+                array
+                key="sectionAreas"
+                class="resume__section-areas"
+              >
+                {{#for area in section.sectionAreas}}
+                  <div 
+                    object
+                    key:area-image="@search"
+                    key:area-title="@search"
+                    key:area-details="@search"
+                    key:area-text="@search"
+                    class="resume__section-area"
+                  >
+                    <button 
+                      remove:with-confirm
+                      edit-control-invisible
+                      class="resume__section-area-remove"
+                    ><img src="/assets/images/trash.svg"></button>
+                    <label
+                      edit-control-disable
+                      class="resume__section-area-image-container"
+                    > 
+                      <input 
+                        class="hidden-file" 
+                        type="file" 
+                        update:area-image
+                      >
+                      <img 
+                        target:area-image="@attr:src"
+                        class="resume__section-area-image-upload-icon" 
+                        src="{{default area.areaImage '/assets/images/upload.svg'}}"
+                      >
+                    </label>
+                    <div class="resume__section-area-info">
+                      <div class="resume__section-area-info-title">
+                        <span 
+                          target:area-title="@innerText"
+                          edit:area-title:without-remove
+                          default:area-title="Item title"
+                          class="resume__section-area-info-title-main"
+                        >{{default area.areaTitle "New item title"}}</span>
+                        <span 
+                          target:area-details="@innerText"
+                          edit:area-details:without-remove
+                          default:area-details="(Nov 2019, Mar 2020)"
+                          class="resume__section-area-info-title-details"
+                        >{{default area.areaDetails "(Nov 2019, Mar 2020)"}}</span>
+                      </div>
+                      <div 
+                        target:area-text="@innerText"
+                        edit:area-text:textarea:without-remove
+                        default:area-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus laoreet erat. Quisque viverra mauris non quam porttitor fermentum. Phasellus non aliquam eros."
+                        class="resume__section-area-info-text"
+                      >{{default area.areaText "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus laoreet erat. Quisque viverra mauris non quam porttitor fermentum. Phasellus non aliquam eros."}}</div>
+                    </div>
+                  </div>
+                {{/for}}
+              </div>
+              <button 
+                new:area
+                edit-control-hide
+                class="resume__section-button resume__section-button--add-area"
+              >+ Add new item</button>
+            </div>
+          </div>
+          <div class="resume__section-inner" flex-show-if="editing=width">
+            <div class="resume__section-grab-area">
+              <img class="resume__section-grab-handle" src="/assets/images/grab-handle.svg">
+            </div>
+            <div class="resume__section-main-area">
+              <div>
+                <h2 class="resume__section-title">How wide should this section be?</h2>
+                <div class="resume__layout-choices-container">
+                  <div 
+                    update:width="full"
+                    class="resume__layout-choices-item"
+                  >
+                    <div class="resume__layout-choices-item-layer">
+                      <img class="resume__layout-choices-checkmark" src="/assets/images/checkmark.svg">
+                      <div class="resume__layout-choices-full-width"></div>
+                    </div>
+                    <div class="resume__layout-choices-item-title">Full width</div>
+                  </div>
+                  <div 
+                    update:width="half"
+                    class="resume__layout-choices-item"
+                  >
+                    <div class="resume__layout-choices-item-layer">
+                      <img class="resume__layout-choices-checkmark" src="/assets/images/checkmark.svg">
+                      <div class="resume__layout-choices-half-width"></div>
+                      <div class="resume__layout-choices-half-width"></div>
+                    </div>
+                    <div class="resume__layout-choices-item-title">Half width</div>
+                  </div>
+                </div>
+                <div class="resume__layout-buttons">
+                  <button 
+                    update:editing="none"
+                    class="resume__layout-button resume__layout-button--secondary"
+                  >Back</button>
+                  <button 
+                    update:editing="layout"
+                    class="resume__layout-button"
+                  >Continue</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="resume__section-inner" flex-show-if="editing=layout">
+            <div class="resume__section-grab-area">
+              <img class="resume__section-grab-handle" src="/assets/images/grab-handle.svg">
+            </div>
+            <div class="resume__section-main-area">
+              <div>
+                <h2 class="resume__section-title">Which layout should this section use?</h2>
+                <div class="resume__layout-choices-container">
+                  <div 
+                    update:layout="default"
+                    class="resume__layout-choices-item"
+                  >
+                    <div class="resume__layout-choices-item-layer">
+                      <img class="resume__layout-choices-checkmark" src="/assets/images/checkmark.svg">
+                      <img class="resume__layout-choices-image" src="/assets/images/layout--details-plus-image.svg">
+                    </div>
+                    <div class="resume__layout-choices-item-title">Detailed List + Image</div>
+                  </div>
+                  <div 
+                    update:layout="details"
+                    class="resume__layout-choices-item"
+                  >
+                    <div class="resume__layout-choices-item-layer">
+                      <img class="resume__layout-choices-checkmark" src="/assets/images/checkmark.svg">
+                      <img class="resume__layout-choices-image" src="/assets/images/layout--details.svg">
+                    </div>
+                    <div class="resume__layout-choices-item-title">Detailed List</div>
+                  </div>
+                  <div 
+                    update:layout="list"
+                    class="resume__layout-choices-item"
+                  >
+                    <div class="resume__layout-choices-item-layer">
+                      <img class="resume__layout-choices-checkmark" src="/assets/images/checkmark.svg">
+                      <img class="resume__layout-choices-image" src="/assets/images/layout--list.svg">
+                    </div>
+                    <div class="resume__layout-choices-item-title">Simple List</div>
+                  </div>
+                </div>
+                <div class="resume__layout-buttons">
+                  <button 
+                    update:editing="none"
+                    class="resume__layout-button resume__layout-button--secondary"
+                  >Back</button>
+                  <button 
+                    update:editing="none"
+                    class="resume__layout-button"
+                  >Continue</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/for}}
+    </div>
+  </div>
+  <button 
+    new:section
+    class="resume__new-section-button"
+  >
+    <img class="resume__new-section-button-icon" src="/assets/images/plus.svg">
+  </button>
+</div>

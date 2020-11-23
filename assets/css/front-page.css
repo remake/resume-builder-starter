@@ -1,0 +1,62 @@
+.front-page {
+  background-color: #F2F6FA;
+  min-height: 100%;
+}
+
+.front-page__inner {
+  background-color: #F2F6FA;
+}
+
+.front-page__top {
+  padding: 0 1.5rem 11rem;
+  background-color: #502ACD;
+}
+
+.front-page__logo {
+  margin: 0 auto;
+  max-width: 80px;
+}
+
+.front-page__title {
+  margin-bottom: 1.5rem;
+  font-size: 60px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+}
+
+.front-page__button-container {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.front-page__arrow-container {
+  width: 45px;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+.front-page__preview-container {
+  position: relative;
+  max-width: 861px;
+  margin: 0 auto;
+}
+
+.front-page__preview {
+  position: absolute;
+  width: 100%;
+}
+
+.front-page__preview > img {
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
