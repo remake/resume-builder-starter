@@ -4,7 +4,7 @@ This is the official Resume/CV Builder App for [Remake](https://remaketheweb.com
 
 ## The Code 👩‍💻
 
-All of the behavior for this app is defined in one file (73 line HTML template):
+All of the behavior for this app is defined in one file (293 line HTML template):
 
 * [The app code](pages/app-index.hbs) (app-index.hbs)
 
