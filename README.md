@@ -1,4 +1,4 @@
-# Resume/CV Builder App (Remake)
+# Resume/CV Builder (Remake)
 
 This is the official Kanban app for [Remake](https://remaketheweb.com/).
 
