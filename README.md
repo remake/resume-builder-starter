@@ -10,7 +10,7 @@ All of the behavior for this app is defined in one file (293 line HTML template)
 
 ## Learn How it Works 👩‍🏫
 
-* [The Remake Recipes](https://recipes.remaketheweb.com/) show example code and how it works
+* [The Remake Recipes](https://recipes.remaketheweb.com/) show example Remake code and how it works
 * [The Official Demos](https://docs.remaketheweb.com/interactive-demos/) let you play around with Remake code — without installing anything!
 
 
