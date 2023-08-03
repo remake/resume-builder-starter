@@ -13,7 +13,6 @@ All of the behavior for this app is defined in one file (293 line HTML template)
 * [The Remake Recipes](https://recipes.remaketheweb.com/) show example Remake code and how it works
 * [The Official Demos](https://docs.remaketheweb.com/interactive-demos/) let you play around with Remake code — without installing anything!
 
-
 ## Generate Your Own App! 🎉
 
 To generate it, just run the command `npx remake create myapp`.
